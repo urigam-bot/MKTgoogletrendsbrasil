@@ -5,3 +5,8 @@ services:
     buildCommand: pip install -r requirements.txt
     startCommand: python bot_com_alertas.py
     plan: free
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: CHAT_ID
+        sync: false
