@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: bot-trends-brasil
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python bot_com_alertas.py
+    plan: free
