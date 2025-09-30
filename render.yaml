@@ -2,10 +2,13 @@ services:
   - type: web
     name: bot-trends-brasil
     env: python
+    region: oregon
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python bot_com_alertas.py
-    plan: free
     envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.9"
       - key: BOT_TOKEN
         sync: false
       - key: CHAT_ID
